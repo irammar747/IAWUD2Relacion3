@@ -50,3 +50,13 @@ function esPrimo(int $n):string
         return "Número NO primo";
     }
 }
+
+function promedio($numeros):float
+{
+    if(empty($numeros)){
+        $resultado = 0;
+    }else{
+        $resultado = array_sum($numeros)/count($numeros);
+    }
+    return $resultado;
+}
