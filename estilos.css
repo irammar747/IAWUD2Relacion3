@@ -1,0 +1,105 @@
+/* ================================================= */
+/* 1. Estilos Base y Tipografía Mejorada */
+/* ================================================= */
+
+body {
+    /* Usando una fuente moderna (Sans-Serif por defecto) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #e9ecef; /* Fondo gris claro suave */
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para centrar mejor el resultado */
+    justify-content: center;
+    align-items: center; /* Centra el contenido horizontalmente y verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ================================================= */
+/* 2. Estilos del Contenedor del Formulario (Tarjeta) */
+/* ================================================= */
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada pero suave */
+    width: 100%;
+    max-width: 450px; /* Un poco más ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Más espacio entre los campos */
+    border: 1px solid #dee2e6; /* Borde sutil */
+}
+
+/* ================================================= */
+/* 3. Estilos de los Inputs y Labels */
+/* ================================================= */
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600; /* Un poco más de peso a la fuente del label */
+    color: #495057; /* Texto del label en gris oscuro */
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    padding: 14px 10px; /* Más padding vertical */
+    border: 2px solid #ced4da; /* Borde más visible */
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 17px;
+    color: #343a40;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Mantenemos un acento azul moderno */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Un brillo suave al enfocar */
+    outline: none;
+}
+
+/* ================================================= */
+/* 4. Estilos del Botón de Sumar */
+/* ================================================= */
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px; /* Espaciado sutil para el texto del botón */
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98); /* Pequeño efecto de "pulsación" */
+}
+
+/* ================================================= */
+/* 5. Estilos del Resultado */
+/* ================================================= */
+
+p {
+    text-align: center;
+    font-size: 22px; /* Resultado más grande */
+    font-weight: 700;
+    color: #155724; /* Color verde oscuro elegante */
+    margin-top: 30px;
+    padding: 15px 25px;
+    background-color: #d4edda; /* Fondo verde claro */
+    border-radius: 10px;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    max-width: 450px;
+}
