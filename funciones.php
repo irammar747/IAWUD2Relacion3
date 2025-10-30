@@ -28,3 +28,25 @@ function tablaMultiplicar(int $tabla): string
 
     return $resultado;
 }
+
+/**
+ * Ejercicio 5 -> Función que devuelve si un número es o no primo
+ * @param int $n -> Número a comprobar
+ * @return string -> Primo si es primo, no primo en caso contrario
+ */
+function esPrimo(int $n):string
+{
+    $primo = true;
+
+    for($i=2;$i<$n;$i++){
+        if($n % $i == 0){
+            $primo = false;
+            break;
+        }
+    }
+    if($primo){
+        return "Número primo";
+    }else{
+        return "Número NO primo";
+    }
+}
