@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <h1>Relación 3 - Funciones</h1>
+    <h2>Ejercicio 4 - Tabla de multiplicar</h2>
     <form action="" method="post">
         <label for="num1">
             Tabla: 

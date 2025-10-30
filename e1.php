@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <h1>Relación 3 - Funciones</h1>
+    <h2>Ejercicio 1 - Suma de dos números</h2>
     <form action="" method="post">
         <label for="num1">
             Número 1:
