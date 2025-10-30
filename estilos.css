@@ -144,3 +144,41 @@ body > ul li:nth-child(even) {
 body > ul li:hover {
     background-color: #e2f0e3; /* Un ligero cambio de color al pasar el ratón */
 }
+
+/* ================================================= */
+/* 7. Estilos para Encabezados (H1 y H2) */
+/* ================================================= */
+
+h1 {
+    font-size: 2.5rem; /* Un tamaño grande para el título principal */
+    color: #343a40; /* Color oscuro para contraste */
+    margin-bottom: 0.5rem; /* Espacio mínimo debajo del H1 */
+    font-weight: 700; /* Fuente negrita */
+    text-align: center; /* Centrar el título */
+    width: 100%;
+    max-width: 450px; /* Asegurar que no sea más ancho que el formulario */
+}
+
+h2 {
+    font-size: 1.5rem; /* Un tamaño secundario claro */
+    color: #495057; /* Un gris oscuro, menos prominente que el H1 */
+    margin-top: 0; 
+    margin-bottom: 30px; /* Espacio considerable para separarlo del formulario */
+    font-weight: 500; /* Fuente seminegrita o normal */
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Ajuste al body: 
+   Dado que ahora el body contiene H1, H2, y el formulario, 
+   necesitamos ajustar cómo los centra Flexbox para que se apilen correctamente. */
+body {
+    /* (Asegúrate de que estas propiedades ya están en tu CSS, si no, añádelas) */
+    display: flex;
+    flex-direction: column; /* Apila H1, H2, Formulario y Resultado verticalmente */
+    justify-content: flex-start; /* Puedes cambiar a 'center' si quieres centrado vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-height: 100vh;
+    padding: 30px 20px; /* Añadir padding general en lugar de margin-top */
+}
