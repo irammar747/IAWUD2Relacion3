@@ -103,3 +103,44 @@ p {
     width: 100%;
     max-width: 450px;
 }
+
+/* ================================================= */
+/* 6. Estilos para la Tabla de Multiplicar (Lista) */
+/* ================================================= */
+
+body > ul {
+    /* Selecciona el UL que es hijo directo del BODY */
+    list-style: none; /* Elimina las viñetas por defecto */
+    padding: 0;
+    margin-top: 30px; /* Espacio para separarlo del formulario */
+    width: 100%;
+    max-width: 450px; /* Mismo ancho que el formulario para alineación */
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacarlo */
+    border: 1px solid #ced4da; /* Borde sutil */
+}
+
+body > ul li {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #343a40; /* Texto legible */
+    border-bottom: 1px solid #f0f0f0; /* Separador entre filas */
+    transition: background-color 0.2s;
+}
+
+body > ul li:last-child {
+    border-bottom: none; /* Elimina el separador de la última línea */
+    /* Asegura que el borde inferior del UL sea visible */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+body > ul li:nth-child(even) {
+    background-color: #f8f9fa; /* Alternar color de fondo para efecto cebra  */
+}
+
+body > ul li:hover {
+    background-color: #e2f0e3; /* Un ligero cambio de color al pasar el ratón */
+}

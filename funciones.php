@@ -21,7 +21,7 @@ function tablaMultiplicar(int $tabla): string
     $resultado = "<ul>";
 
     for($i=0;$i<=10;$i++){
-        $resultado .= "<li>$tabla * $i = ".($tabla*$i)."</li>";
+        $resultado .= "<li>$tabla x $i = ".($tabla*$i)."</li>";
     }
 
     $resultado .= "<ul>";
