@@ -40,6 +40,7 @@ function esPrimo(int $n):string
 
     for($i=2;$i<$n;$i++){
         if($n % $i == 0){
+            //Si encuentra un divisor entre 2 y el número anterior al número calculado es porque no es primo
             $primo = false;
             break;
         }
@@ -51,25 +52,37 @@ function esPrimo(int $n):string
     }
 }
 
+/**
+ * Función que calcula el valor medio de los valores de un array
+ * @param mixed $numeros Array con los números para calcular el promedio
+ * @return float|int //Media de los números introducidos
+ */
 function promedio($numeros):float
 {
-    if(empty($numeros)){
-        $resultado = 0;
+    if(empty($numeros)){ //La función empty devuelve true si el array está vacío
+        $resultado = 0; //Si el array está vacío el resultado será 0
     }else{
-        $resultado = array_sum($numeros)/count($numeros);
+        //array_sum devuelve la suma de los elementos de un array
+        //count devuelve el número de elementos de un array
+        $resultado = array_sum($numeros)/count($numeros); 
     }
     return $resultado;
 }
 
+/**
+ * Función que devuelve una cadena con la representación en binario de un número decimal
+ * @param int $num Número decimal
+ * @return string Cadena de caracteres con el número en binario
+ */
 function convertirBinario(int $num): string{
     $binario = "";
     do{
         $resto = $num%2;
-        $binario .= $resto;
-        $num = intdiv($num, 2);
-    }while($num != 0);
+        $binario .= $resto; //Iremos concatenando los restos a una cadena
+        $num = intdiv($num, 2); //intdiv hace la división entera sin sacar decimales
+    }while($num != 0); //Dividiremos entre 2 hasta que el número a dividir sea 0
 
-    return strrev($binario);
+    return strrev($binario); //Finalmente damos la vuelta a la cadena para conseguir el binario en el orden correcto
 }
 
 function numDiasMes(int $mes, int $anyo):int
@@ -110,4 +123,20 @@ function numDiasMes(int $mes, int $anyo):int
             $dias = 0;        
     }
     return $dias;
+}
+
+/**
+ * Función que devuelve en formato hh:mm:ss una cantidad de segundos
+ * @param int $seg Segundos a convertir
+ * @return string Cadena que representa las horas, minutos y segundos que había en los segundos proporcionados
+ */
+function convertirSegundos(int $seg):string{
+    $min = intdiv($seg,60); //calculo los minutos que hay en esos seegundos
+    $seg = $seg % 60; //Calculo los segundos restantes que no han llegado para formar un minuto más
+    $horas = intdiv($min, 60); //Calculo las horas que hay en los minutos calculados
+    $min = $min % 60; //Calculo los minutos restantes que no han llegado para formar una hora más
+
+    //El sprintf lo uso para que le de formato al texto, de esta manera si tenemos 1:2:3 lo pondrá como 01:02:03
+    //haciendo que la cifra tenga 2 dígitos como mínimo y que rellene con 0s si falta alguno
+    return sprintf("%02d : %02d : %02d", $horas, $min, $seg);
 }
