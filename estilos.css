@@ -182,3 +182,18 @@ body {
     min-height: 100vh;
     padding: 30px 20px; /* Añadir padding general en lugar de margin-top */
 }
+
+/* ================================================= */
+/* 8. Estilos para Mensajes de Error (Validación) */
+/* ================================================= */
+
+label span {
+    color: #D8000C; /* Un color rojo oscuro, fácil de leer */
+    font-size: 0.9rem; /* Un poco más pequeño que el texto principal */
+    font-weight: bold; /* Lo hacemos negrita para que destaque */
+    display: block; /* Hacemos que ocupe su propia línea */
+    margin-top: 5px; /* Le da un pequeño espacio de separación del input */
+    padding: 5px;
+    background-color: #FFD2D2; /* Un fondo rojo muy pálido */
+    border-radius: 4px; /* Esquinas redondeadas suaves */
+}
