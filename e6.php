@@ -2,8 +2,13 @@
     require_once 'funciones.php';
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $numCadena = $_POST['num'];
-        $array = explode(' ', $numCadena);
-        $resultado = promedio($array);
+        if(!empty($numCadena)){
+            $array = explode(' ', $numCadena);
+            $resultado = promedio($array);
+        }else{
+            $resultado = 0;
+        }
+        
     }
 ?>
 <!DOCTYPE html>

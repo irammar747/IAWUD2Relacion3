@@ -60,3 +60,7 @@ function promedio($numeros):float
     }
     return $resultado;
 }
+
+function convertirBinario(int $num): string{
+    
+}
