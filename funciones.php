@@ -179,3 +179,13 @@ function generarSorteo(int $min, int $max): int
 {
     return random_int($min, $max);
 }
+
+function ordenar(string $num): array{
+    $arrayOrdenado = [];
+
+    if(!empty($num)){
+        $arrayOrdenado = explode(' ', $num);
+        sort($arrayOrdenado); //Función que ordena los elementos de un array
+    }
+    return $arrayOrdenado;
+}
