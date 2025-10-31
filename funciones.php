@@ -71,3 +71,43 @@ function convertirBinario(int $num): string{
 
     return strrev($binario);
 }
+
+function numDiasMes(int $mes, int $anyo):int
+{
+    switch($mes){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            $dias = 31;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            $dias = 30;
+            break;
+        case 2:
+            //Son bisiestos todos los años múltiplos de 4, excepto aquellos que son múltiplos de 100 pero no de 400.
+            //$bisiesto = $anyo % 4 == 0 && !($anyo % 100 == 0 && $anyo % 400 != 0)?true:false;
+
+            if($anyo % 4 == 0 && !($anyo % 100 == 0 && $anyo % 400 != 0)){
+                $bisiesto = true;
+            }else{
+                $bisiesto = false;
+            }
+
+            if($bisiesto){
+                $dias = 29;
+            }else{
+                $dias = 28;
+            }
+            break;
+        default:
+            $dias = 0;        
+    }
+    return $dias;
+}
