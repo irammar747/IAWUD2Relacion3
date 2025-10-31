@@ -140,3 +140,19 @@ function convertirSegundos(int $seg):string{
     //haciendo que la cifra tenga 2 dígitos como mínimo y que rellene con 0s si falta alguno
     return sprintf("%02d : %02d : %02d", $horas, $min, $seg);
 }
+
+/**
+ * Función que devuelve un array con los divisores de un número
+ * @param mixed $num Número a calcular sus divisores
+ * @return int[] //Array con los divisores de un número
+ */
+function obtenerDivisores($num): array{
+    $divisores = []; //Declaro un array vacio
+
+    for($i=1;$i<=$num;$i++){
+        if($num % $i == 0){
+            $divisores[] = $i; //Cada vez que encuentre un divisor lo añado al array
+        }
+    }
+    return $divisores;
+}
