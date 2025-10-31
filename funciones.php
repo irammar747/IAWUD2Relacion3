@@ -157,8 +157,25 @@ function obtenerDivisores($num): array{
     return $divisores;
 }
 
+/**
+ * Función que intercambia el valor de dos varibles pasadas como párametro
+ * @param mixed $n1
+ * @param mixed $n2
+ * @return void
+ */
 function intercambiar(&$n1, &$n2):void{
     $aux = $n1;
     $n1 = $n2;
     $n2 = $aux;
+}
+
+/**
+ * Función que devuelve un número aletorio entre un mínimo y un máximo
+ * @param int $min Número mínimo del sorteo
+ * @param int $max Número máximo del sorteo
+ * @return int //Número generado
+ */
+function generarSorteo(int $min, int $max): int
+{
+    return random_int($min, $max);
 }
