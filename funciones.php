@@ -62,5 +62,12 @@ function promedio($numeros):float
 }
 
 function convertirBinario(int $num): string{
-    
+    $binario = "";
+    do{
+        $resto = $num%2;
+        $binario .= $resto;
+        $num = intdiv($num, 2);
+    }while($num != 0);
+
+    return strrev($binario);
 }
