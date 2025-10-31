@@ -156,3 +156,9 @@ function obtenerDivisores($num): array{
     }
     return $divisores;
 }
+
+function intercambiar(&$n1, &$n2):void{
+    $aux = $n1;
+    $n1 = $n2;
+    $n2 = $aux;
+}
