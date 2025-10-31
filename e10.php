@@ -17,7 +17,7 @@
     <h1>Relación 3 - Funciones</h1>
     <h2>Ejercicio 10 - Convertir segundos a horas, minutos y segundos</h2>
     <form action="" method="post">
-        <label for="mes">
+        <label for="segundos">
             Segundos:
             <input type="text" name="segundos" id="segundos"/>
         </label>

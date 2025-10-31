@@ -17,7 +17,7 @@
     <h1>Relación 3 - Funciones</h1>
     <h2>Ejercicio 11 - Obtener divisores de un número</h2>
     <form action="" method="post">
-        <label for="mes">
+        <label for="num">
             Número: 
             <input type="text" name="num" id="num"/>
         </label>
